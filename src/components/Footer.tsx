@@ -1,14 +1,12 @@
-import React from 'react'
-import MaxWidthWrapper from './wrapper/MaxWidthWrapper'
+import React from "react";
+import MaxWidthWrapper from "./wrappers/MaxWidthWrapper";
 
 const Footer = () => {
   return (
     <div>
-      <MaxWidthWrapper>
-        footer
-      </MaxWidthWrapper>
+      <MaxWidthWrapper>footer</MaxWidthWrapper>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
