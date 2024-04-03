@@ -1,6 +1,7 @@
 import React from "react";
 import MaxWidthWrapper from "./wrappers/MaxWidthWrapper";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -10,14 +11,29 @@ const Navbar = () => {
           {/* logo */}
           <div>
             <Link href="/" className="flex z-40 font-semibold">
-              <span>FastStart.</span>
+              <Image src='vercel.svg' alt="logo of website" width={120} height={120}/>
             </Link>
           </div>
-          <div>
+          <div className="flex gap-3 items-center">
             {/* menu */}
-            <div>menus</div>
+            <div className="flex gap-3 mr-4" >
+              <div>
+                <Link href='/#'>
+                  <span>docs</span>
+                </Link>
+              </div>
+              <div>
+                <Link href='/#'>
+                  <span>pricing</span>
+                </Link>
+              </div>
+            </div>
             {/* get start */}
-            <div>login / get start</div>
+            <div className="">
+              <Link href='/#'>
+                <span className="font-bold text-xl">get started</span>
+              </Link>
+            </div>
           </div>
         </div>
       </MaxWidthWrapper>
