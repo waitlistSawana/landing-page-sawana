@@ -2,6 +2,7 @@ import React from "react";
 import MaxWidthWrapper from "./wrappers/MaxWidthWrapper";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
@@ -31,7 +32,9 @@ const Navbar = () => {
             {/* get start */}
             <div className="">
               <Link href='/#'>
-                <span className="font-bold text-xl">get started</span>
+                <Button>
+                  <span className="text-base">Get Started</span>
+                </Button>
               </Link>
             </div>
           </div>

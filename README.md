@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## 提前配置内容
+## 配置内容
 
 - 容器 `./src/components/wrapper`
 
@@ -9,6 +9,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - 百度统计 `src\app\BaiDuAnalytics.tsx` https://tongji.baidu.com/
 
 - 谷歌统计 `gtag.js` `src\app\GoogleAnalytics.tsx` https://analytics.google.com/analytics/web
+
+- shadcn/ui 启动 `npx shadcn-ui@latest init`
+
+- shadcn/ui 安装 ``
 
 ## 下载命令
 
