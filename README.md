@@ -12,19 +12,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - shadcn/ui 启动 `npx shadcn-ui@latest init`
 
-- shadcn/ui 安装 ``
+- shadcn/ui 安装 已经在`./src/components/ui` 下 更多请查看shadcn官网
 
 ## 下载命令
 
 启动项目
 
-- npx create-next-app@latest .
-
-- npm i
+- `npm i`
 
 安装依赖 / 包
 
-- npm install clsx tailwind-merge
+- `npm install clsx tailwind-merge`
+
+本地运行
+
+- `npm run dev`
 
 ## Getting Started
 
