@@ -1,41 +1,94 @@
-import React from 'react'
-import MaxWidthWrapper from '../wrappers/MaxWidthWrapper'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card'
-import { Button } from '../ui/button'
+import React from "react";
+import MaxWidthWrapper from "../wrappers/MaxWidthWrapper";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 // card config
 const plans = [
-  {title: 'Basic', currency: '', price: 'Free', features: ['Feature 1', 'Feature 2', 'Feature 3']},
-  {title: 'Credits', currency: '$', price: '1.99', features: ['Feature 1', 'Feature 2', 'Feature 3']},
-  {title: 'Premium', currency: '$', price: '9.99', features: ['Feature 1', 'Feature 2', 'Feature 3']},
-]
+  {
+    title: "Basic",
+    currency: "",
+    price: "Free",
+    features: ["Feature 1", "Feature 2", "Feature 3"],
+    buttonVariant: "outline",
+  },
+  {
+    title: "Credits",
+    currency: "$",
+    price: "1.99",
+    features: ["Feature 1", "Feature 2", "Feature 3", "Feature 2", "Feature 3"],
+    buttonVariant: "secondary",
+  },
+  {
+    title: "Premium",
+    currency: "$",
+    price: "9.99",
+    features: ["Feature 1", "Feature 2", "Feature 3"],
+    buttonVariant: "default",
+  },
+];
+
+const handleVariant = (variant: string) => { // 这个用来硬处理button的variant参数 它没法识别map遍历 应该有官方的方法
+  if(variant === 'default') {return 'default'}
+  else if(variant === 'secondary') {return 'secondary'}
+  else if(variant === 'outline') {return 'outline'}
+  else {return 'default'}
+}
 
 const Pricing = () => {
   return (
-    <MaxWidthWrapper className='flex flex-col justify-center mb-5'>
+    <MaxWidthWrapper className="flex flex-col justify-center mb-5">
       {/* head */}
-      <div className='mb-3 md:mb-4'>
-        <div className='font-bold text-purple-700 text-4xl md:text-5xl'>Pricing</div>
-        <div className='font-semibold text-lg md:text-lg'>Flexible and transparent pricing</div>
-        <div className='text-base'>get the features you want and a price you'll love</div>
+      <div className="mb-3 md:mb-4">
+        <div className="mb-3 font-bold text-purple-700 text-4xl md:text-5xl">
+          Pricing
+        </div>
+        <div className="font-semibold text-lg md:text-lg">
+          Flexible and transparent pricing
+        </div>
+        <div className="mb-3 text-base">
+          get the features you want and a price you'll love
+        </div>
       </div>
       {/* card */}
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
-        <Card>
-          <CardHeader>
-            <div className=''>{plans[0].title}</div>
-            <div><span>{plans[0].currency}</span>{plans[0].price}</div>
-          </CardHeader>
-          <CardContent></CardContent>
-          <CardFooter className='flex w-full'>
-            <Button className='mx-auto'>
-              get started
-            </Button>
-          </CardFooter>
-        </Card>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-full ">
+        {plans.map((plan, index) => (
+          <Card key={index} className="rounded-2xl shadow flex flex-col justify-between hover:border-purple-400 hover:shadow-lg transition-all">
+            <div>
+              <CardHeader className="">
+                <div className="text-lg text-purple-700 font-semibold">
+                  {plan.title}
+                </div>
+                <div className="hover:scale-110 transition-all">
+                  {plan.currency}{" "}
+                  <span className="text-4xl font-extrabold">{plan.price}</span>
+                </div>
+              </CardHeader>
+              <CardContent className="">
+                <ul>
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex}>{feature}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </div>
+            <CardFooter className="">
+              <Button  variant={handleVariant(plan.buttonVariant)} className="mx-auto rounded-lg hover:ring hover:ring-purple-400 hover:scale-105 transition-all" asChild>
+                <Link href={'/#'}>Get Started</Link>
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </MaxWidthWrapper>
-  )
-}
+  );
+};
 
-export default Pricing
+export default Pricing;

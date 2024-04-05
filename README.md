@@ -14,6 +14,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - shadcn/ui 安装 已经在`./src/components/ui` 下 更多请查看shadcn官网
 
+- lucide react icon `npm install lucide-react`
+
 ## 下载命令
 
 启动项目

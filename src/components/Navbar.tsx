@@ -17,16 +17,18 @@ const Navbar = () => {
           </div>
           <div className="flex gap-3 items-center">
             {/* menu */}
-            <div className="flex gap-3 mr-4" >
-              <div>
-                <Link href='/#'>
-                  <span>docs</span>
-                </Link>
-              </div>
-              <div>
-                <Link href='/#'>
-                  <span>pricing</span>
-                </Link>
+            <div className="md:block hidden">
+              <div className="flex gap-3 mr-4" >
+                <div>
+                  <Link href='/#'>
+                    <span>docs</span>
+                  </Link>
+                </div>
+                <div>
+                  <Link href='/#'>
+                    <span>pricing</span>
+                  </Link>
+                </div>
               </div>
             </div>
             {/* get start */}
