@@ -72,7 +72,7 @@ const Pricing = () => {
                 </div>
               </CardHeader>
               <CardContent className="">
-                <ul>
+                <ul className="flex flex-col gap-1 md:gap-3">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex}>{feature}</li>
                   ))}

@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "../components/analytics/GoogleAnalytics";
 import BaiDuAnalytics from "../components/analytics/BaiDuAnalytics";
+import { ThemeProvider } from "@/components/home/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,22 +21,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <body className={inter.className}>
-        
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme={'light'}
+          enableSystem
+        >
+          
+          <Navbar />
+          {children}
+          <Footer />
 
-        {/* 统计代码 - 开发环境不会进行数据统计 */}
-        {process.env.NODE_ENV === "development" ? (
-          <></>
-        ) : (
-          <>
-            <GoogleAnalytics />
-            <BaiDuAnalytics />
-          </>
-        )}
+          {/* 统计代码 - 开发环境不会进行数据统计 */}
+          {process.env.NODE_ENV === "development" ? (
+            <></>
+          ) : (
+            <>
+              <GoogleAnalytics />
+              <BaiDuAnalytics />
+            </>
+          )}
+
+        </ThemeProvider>
       </body>
     </html>
   );
