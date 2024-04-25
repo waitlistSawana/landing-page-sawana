@@ -12,28 +12,38 @@ const Navbar = () => {
           {/* logo */}
           <div>
             <Link href="/" className="flex z-40 font-semibold">
-              <Image src='vercel.svg' alt="logo of website" width={120} height={120}/>
+              <Image
+                src="vercel.svg"
+                alt="logo of website"
+                width={120}
+                height={120}
+              />
             </Link>
           </div>
           <div className="flex gap-3 items-center">
             {/* menu */}
             <div className="md:block hidden">
-              <div className="flex gap-3 mr-4" >
+              <div className="flex mr-4">
                 <div>
-                  <Link href='/#'>
-                    <span>docs</span>
+                  <Link href="#Features">
+                  <Button variant={"ghost"}>Features</Button>
                   </Link>
                 </div>
                 <div>
-                  <Link href='/#'>
-                    <span>pricing</span>
+                  <Link href="#Pricing">
+                  <Button variant={"ghost"}>Pricing</Button>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="#FQA">
+                    <Button variant={"ghost"}>FQA</Button>
                   </Link>
                 </div>
               </div>
             </div>
             {/* get start */}
             <div className="">
-              <Link href='/#'>
+              <Link href="/login">
                 <Button>
                   <span className="text-base">Get Started</span>
                 </Button>

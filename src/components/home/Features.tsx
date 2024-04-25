@@ -52,7 +52,11 @@ const features = [
 
 const Features = () => {
   return (
-    <MaxWidthWrapper>
+    <MaxWidthWrapper className="">
+      <div id="Features"></div>
+
+      <div className="h-[10vh]"></div>
+
       {/* head */}
       <div className="mb-3 md:mb-6">
         <div className="mb-3 font-bold text-purple-700 text-4xl md:text-5xl">

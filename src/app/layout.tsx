@@ -11,7 +11,7 @@ import { ThemeProvider } from "@/components/home/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fast Stater | Sawana",
+  title: "Landing Page | Sawana",
   description: "提前配置好新建网页的模板，尤其首页的配置",
 };
 

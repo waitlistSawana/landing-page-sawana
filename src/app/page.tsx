@@ -1,3 +1,4 @@
+import FQA from "@/components/home/FQA";
 import Features from "@/components/home/Features";
 import Hero from "@/components/home/Hero";
 import Pricing from "@/components/home/Pricing";
@@ -8,10 +9,9 @@ export default function Home() {
     <div>
       <Hero />
       <Show />
-        <div className="h-[10vh]"></div>
       <Features />
-        <div className="h-[10vh]"></div>
       <Pricing />
+      <FQA />
     </div>
   );
 }
