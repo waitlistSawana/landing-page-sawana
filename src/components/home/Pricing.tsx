@@ -10,7 +10,7 @@ import {
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-import { plans } from "@/lib/data/pricing_card";
+import { plans } from "@/lib/data/pricing_plans_card";
 
 const handleVariant = (variant: string) => {
   // 这个用来硬处理button的variant参数 它没法识别map遍历 应该有官方的方法
@@ -44,6 +44,7 @@ const Pricing = () => {
           get the features you want and a price you'll love
         </div>
       </div>
+
       {/* card */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-full ">
         {plans.map((plan, index) => (
@@ -81,6 +82,7 @@ const Pricing = () => {
           </Card>
         ))}
       </div>
+      
     </MaxWidthWrapper>
   );
 };

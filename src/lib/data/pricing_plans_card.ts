@@ -6,6 +6,7 @@ const plans = [
     price: "Free",
     features: ["Feature 1", "Feature 2", "Feature 3"],
     buttonVariant: "outline",
+    url: '',
   },
   {
     title: "Premium",
@@ -13,6 +14,7 @@ const plans = [
     price: "9.99",
     features: ["Feature 1", "Feature 2", "Feature 3"],
     buttonVariant: "default",
+    url: '',
   },
   {
     title: "Credits",
@@ -20,7 +22,8 @@ const plans = [
     price: "1.99",
     features: ["Feature 1", "Feature 2", "Feature 3", "Feature 2", "Feature 3"],
     buttonVariant: "secondary",
+    url: '',
   },
-];
+]
 
 export { plans };
