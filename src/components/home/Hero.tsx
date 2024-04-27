@@ -2,6 +2,9 @@ import React from 'react'
 import MaxWidthWrapper from "@/components/wrappers/MaxWidthWrapper";
 import Link from 'next/link';
 
+import ScrollDownPage from './ScrollDownPage';
+import OGIcons from './OGIcons';
+
 const Hero = () => {
   return (
     <MaxWidthWrapper className="h-[calc(100vh-22vh)] mt-16 sm:mt-32 flex-col items-center justify-center ">
@@ -27,11 +30,11 @@ const Hero = () => {
         </div>
 
         <div>
-          og
+          <OGIcons />
         </div>
 
         <div>
-          向下的弹动箭头
+          <ScrollDownPage />
         </div>
 
         {/* 背景彩色装饰 */}

@@ -6,14 +6,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import { FAQContent } from "@/data/landingpage_FAQ";
+import { FAQContent } from "@/lib/data/landingpage_FAQ";
 import { Card } from "../ui/card";
 
 export default function FQAComponent() {
   return (
     <MaxWidthWrapper>
       <div id="FQA"></div>
-      
+
       <div className="h-[calc(8vh)]"></div>
 
       <div className="mb-3 md:mb-6">

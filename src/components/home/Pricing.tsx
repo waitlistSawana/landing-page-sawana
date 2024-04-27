@@ -10,7 +10,7 @@ import {
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-import { plans } from "@/data/pricing_card";
+import { plans } from "@/lib/data/pricing_card";
 
 const handleVariant = (variant: string) => {
   // 这个用来硬处理button的variant参数 它没法识别map遍历 应该有官方的方法
