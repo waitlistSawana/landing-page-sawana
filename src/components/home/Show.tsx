@@ -1,5 +1,7 @@
 import React from 'react'
+
 import Image from 'next/image'
+import showImage from "../../../public/dashboard-preview.jpg"
 
 const Show = () => {
   return (
@@ -9,7 +11,7 @@ const Show = () => {
             <div className="mt-4 flow-root sm:mt-8">
               <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
                 <Image
-                  src="/dashboard-preview.jpg"
+                  src={showImage}
                   alt="product preview"
                   width={1364}
                   height={886}
