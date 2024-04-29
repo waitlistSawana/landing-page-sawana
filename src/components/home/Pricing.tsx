@@ -11,6 +11,8 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 
 import { plans } from "@/lib/data/pricing_plans_card";
+import { Span } from "next/dist/trace";
+import { CircleCheck } from "lucide-react";
 
 const handleVariant = (variant: string) => {
   // 这个用来硬处理button的variant参数 它没法识别map遍历 应该有官方的方法
@@ -50,7 +52,7 @@ const Pricing = () => {
         {plans.map((plan, index) => (
           <Card
             key={index}
-            className="rounded-2xl shadow flex flex-col justify-between hover:border-purple-400 hover:shadow-lg transition-all"
+            className="rounded-2xl shadow flex flex-col justify-between hover:border-purple-400 hover:shadow-xl transition-all hover:-translate-y-2"
           >
             <div>
               <CardHeader className="">
@@ -65,7 +67,12 @@ const Pricing = () => {
               <CardContent className="">
                 <ul className="flex flex-col gap-1 md:gap-3">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}>{feature}</li>
+                    <li key={featureIndex}>
+                      <span className="flex flex-row justify-center items-center">
+                        {feature.check && <CircleCheck className="text-green-500 mr-2"/>}
+                        <span className="text-lg">{feature.name}</span>
+                      </span>
+                    </li>
                   ))}
                 </ul>
               </CardContent>
@@ -73,6 +80,7 @@ const Pricing = () => {
             <CardFooter className="">
               <Button
                 variant={handleVariant(plan.buttonVariant)}
+                size={'lg'}
                 className="mx-auto rounded-lg hover:ring hover:ring-purple-400 hover:scale-105 transition-all"
                 asChild
               >
@@ -82,7 +90,6 @@ const Pricing = () => {
           </Card>
         ))}
       </div>
-      
     </MaxWidthWrapper>
   );
 };
