@@ -9,13 +9,8 @@ export default function OGIcons() {
     <MaxWidthWrapper className="h-[12vh] py-8">
       <div className="flex justify-center items-center gpa-2">
         {OGs.map((og, index) => (
-          <Link href={og.url} target="_blank">
-            <Button
-              key={index}
-              size={"icon"}
-              variant={"ghost"}
-              className="rounded-full"
-            >
+          <Link key={index} href={og.url} target="_blank">
+            <Button size={"icon"} variant={"ghost"} className="rounded-full">
               {og.icon}
             </Button>
           </Link>

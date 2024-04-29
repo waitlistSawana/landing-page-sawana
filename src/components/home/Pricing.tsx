@@ -43,7 +43,7 @@ const Pricing = () => {
           Flexible and transparent pricing
         </div>
         <div className="mb-3 text-base">
-          get the features you want and a price you'll love
+          get the features you want and a price you&apos;ll love
         </div>
       </div>
 
@@ -69,7 +69,9 @@ const Pricing = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex}>
                       <span className="flex flex-row justify-center items-center">
-                        {feature.check && <CircleCheck className="text-green-500 mr-2"/>}
+                        {feature.check && (
+                          <CircleCheck className="text-green-500 mr-2" />
+                        )}
                         <span className="text-lg">{feature.name}</span>
                       </span>
                     </li>
@@ -80,7 +82,7 @@ const Pricing = () => {
             <CardFooter className="">
               <Button
                 variant={handleVariant(plan.buttonVariant)}
-                size={'lg'}
+                size={"lg"}
                 className="mx-auto rounded-lg hover:ring hover:ring-purple-400 hover:scale-105 transition-all"
                 asChild
               >
