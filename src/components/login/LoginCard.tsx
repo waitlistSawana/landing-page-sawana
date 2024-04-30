@@ -15,7 +15,7 @@ import {
 
 export default function LoginCard() {
   return (
-    <Card className="w-[40vw] shadow-md rounded-3xl p-8">
+    <Card className="w-[100vw] md:w-[40vw] shadow-md rounded-3xl p-1 md:p-8">
       <CardHeader>
         <CardTitle className="text-4xl text-purple-800 font-bold">
           Login to Play
@@ -28,7 +28,7 @@ export default function LoginCard() {
       <CardFooter className="flex flex-col gap-5">
         <LoginLink>
           <Button
-            className="w-[20vw] text-lg rounded-full hover:scale-105 transition"
+            className="w-[70vw] md:w-[20vw] text-lg rounded-full hover:scale-105 transition"
             size={"lg"}
             variant={"default"}
           >
@@ -37,7 +37,7 @@ export default function LoginCard() {
         </LoginLink>
         <RegisterLink>
           <Button
-            className="w-[20vw] text-lg rounded-full hover:scale-105 transition"
+            className="w-[70vw] md:w-[20vw] text-lg rounded-full hover:scale-105 transition"
             size={"lg"}
             variant={"default"}
           >
