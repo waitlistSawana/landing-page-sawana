@@ -23,6 +23,12 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/_next")) return NextResponse.next();
 
+  // Check if the request path matches the excluded route
+  if (request.nextUrl.pathname.startsWith("/api/auth")) {
+    // Skip i18n logic for the excluded route
+    return NextResponse.next();
+  } 
+
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
   const pathnameHasLocale = locales.some(
@@ -47,6 +53,6 @@ export const config = {
     // Skip all internal paths (_next)
     "/((?!_next).*)",
     // Optional: only run on root (/) URL
-    // '/'
+    '/',
   ],
 };
