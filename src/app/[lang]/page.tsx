@@ -15,6 +15,13 @@ export default async function Home({
 
   return (
     <div>
+      
+      <div className="hidden">
+        <div>测试i18n</div>
+        <div>{t.home.title}</div>
+        <div>{t.home.desc}</div>
+      </div>
+
       <Hero />
       <Show />
       <Features />
