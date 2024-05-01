@@ -22,15 +22,15 @@
 
 ## 更新中
 
-- [] prisma数据库集成
+- [ ] prisma数据库集成
 
-- [] 统一配置文件
+- [ ] 统一配置文件
 
-- [] light/dark模式
+- [ ] light/dark模式
 
-- [] 切换语言按钮
+- [ ] 切换语言按钮
 
-- [] wall of love
+- [ ] wall of love
  
 ## 关于我
 
